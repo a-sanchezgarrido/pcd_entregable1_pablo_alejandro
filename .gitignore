@@ -1,0 +1,10 @@
+# Entorno virtual generado en la raíz
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Archivos temporales y caché de Python
+__pycache__/
+.pytest_cache/
+*.pyc

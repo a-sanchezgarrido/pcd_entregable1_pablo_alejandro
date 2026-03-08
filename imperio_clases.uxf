@@ -1,0 +1,70 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>512</x><y>296</y><w>112</w><h>56</h></coordinates><panel_attributes>Nave
+--
+- nombre: String
+- repuestos: list[String]
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>376</x><y>408</y><w>112</w><h>64</h></coordinates><panel_attributes>Estación Espacial
+--
+- tripulacion: int
+- pasaje: int
+- ubicacion: Planeta
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>512</x><y>408</y><w>112</w><h>64</h></coordinates><panel_attributes>NaveEstelar
+--
+- tripulacion: int
+- pasaje: int
+- clase: ClaseEstelar
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>408</y><w>80</w><h>64</h></coordinates><panel_attributes>CazaEstelar
+--
+- dotacion: int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>584</x><y>160</y><w>128</w><h>96</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Unidad Combate Imperial
+--
+- idCombate: String
+- claveCifrada: int
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>664</x><y>296</y><w>96</w><h>56</h></coordinates><panel_attributes>Vehiculo Terrestre
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>808</x><y>312</y><w>128</w><h>96</h></coordinates><panel_attributes>Repuesto
+--
+- nombre: String
+- proveedor: String
+- cantidadDisponible: int 
+- precio: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>808</x><y>160</y><w>128</w><h>96</h></coordinates><panel_attributes>Almacen
+--
+- nombre: String
+- localizacion: String
+- catalogo: list[Repuesto]
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>256</x><y>288</y><w>160</w><h>72</h></coordinates><panel_attributes>Comandante
+--
+
+--
++ consultarRepuestos(r: Repuesto)
++ adquirirRepuesto(r: Repuesto)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>288</y><w>216</w><h>72</h></coordinates><panel_attributes>OperarioAlmacen
+--
+
+--
++ actualizarRepuestos(r: Repuesto, a: Almacen)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>512</y><w>120</w><h>72</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Ubicacion
+--
+ENDOR
+CUMULO_RAIMOS
+NEBULOSA_KALIIDA</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>616</x><y>512</y><w>120</w><h>72</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+ClaseEstelar
+--
+EJECUTOR
+ECLIPSE
+SOBERANO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>664</x><y>248</y><w>64</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;60</additional_attributes></element><element><id>Relation</id><coordinates><x>568</x><y>248</y><w>64</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>344</y><w>96</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>344</y><w>80</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;80</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>344</y><w>24</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>176</x><y>400</y><w>112</w><h>72</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Usuario
+--
+- id: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>352</y><w>88</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>136</x><y>352</y><w>88</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>248</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>304</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=1..*
+m2=1
+tiene asignada &gt;</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element></diagram>
