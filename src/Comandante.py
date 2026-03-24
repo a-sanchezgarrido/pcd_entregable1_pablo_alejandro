@@ -25,6 +25,9 @@ class Comandante(Usuario):
         if nave.comprobar_repuesto(nombre_repuesto):
             print(f"El repuesto {nombre_repuesto} se encuentra entre los necesarios para la nave")
             return True
+        else: 
+            print(f"El respuesto {nombre_repuesto} no es necesario para esta nave")
+            return False
 
     def adquirir_repuesto(self, nombre_repuesto, almacen, nombre_nave):
         nave = None

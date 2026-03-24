@@ -17,12 +17,19 @@ class Nave(UnidadCombateImperial):
     
     def get_comandante(self):
         return self.__comandante
-    
+        
     def cambiar_comandante(self, comandante):
+        comandante_viejo = self.get_comandante()
+        lista_vieja = comandante_viejo.get_naves_asignadas()        
+        for i in lista_vieja:
+                if lista_vieja[i].get_nombre() == self.get_nombre():
+                    del lista_vieja[i]
+                    break 
         self.__comandante = comandante
-    
+        comandante.get_naves_asignadas().append(self)
+
     def comprobar_repuesto(self, nombre_repuesto):
-        for i in self.get_repuestos():
+        for i in self.get_lista_repuestos():
             if i.get_nombre() == nombre_repuesto:
                 return True  
         return False
