@@ -20,7 +20,4 @@ class Nave(UnidadCombateImperial):
     def cambiar_comandante(self, comandante):
         self.__comandante = comandante
     
-    @abstractmethod
-    def encenderMotor(self):
-        return super().encenderMotor()
     

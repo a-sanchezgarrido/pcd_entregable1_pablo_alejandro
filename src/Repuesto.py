@@ -1,6 +1,6 @@
 class Repuesto():
     def __init__(self, nombre, proveedor, stock, precio):
-        self.__nombre= nombre
+        self.__nombre = nombre
         self.__proveedor = proveedor
         self.__stock = stock
         self.__precio = precio
@@ -17,3 +17,5 @@ class Repuesto():
     def get_precio(self):
         return self.__precio
     
+    def set_stock(self, stock):
+        self.__stock = stock

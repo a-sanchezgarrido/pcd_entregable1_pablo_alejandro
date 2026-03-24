@@ -1,6 +1,6 @@
 class Almacen():
     def __init__(self, nombre, localizacion, catalogo):
-        self.__nombre= nombre
+        self.__nombre = nombre
         self.__localizacion = localizacion
         self.__catalogo = catalogo
     
@@ -13,4 +13,8 @@ class Almacen():
     def get_catalogo(self):
         return self.__catalogo
     
-    
+    def comprobar_repuesto(self, nombre_repuesto):
+        for i in self.get_catalogo():
+            if i.get_nombre() == nombre_repuesto:
+                return True  
+        return False

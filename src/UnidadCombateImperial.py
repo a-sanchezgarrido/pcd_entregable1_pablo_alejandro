@@ -11,6 +11,3 @@ class UnidadCombateImperial(ABC):
     def get_claveCifrada(self):
         return self.__claveCifrada
     
-    @abstractmethod
-    def encenderMotor(self):
-        pass
