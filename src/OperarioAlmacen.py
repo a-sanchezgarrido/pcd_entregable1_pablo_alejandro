@@ -22,3 +22,9 @@ class OperarioAlmacen(Usuario):
                     break 
         else:
             almacen.get_catalogo().append(repuesto)
+
+    def encuentra_repuesto(self, nombre_repuesto, imperio):
+        for i in imperio.almacenes:
+            self.consultar_repuesto_almacen(nombre_repuesto, i)
+
+    

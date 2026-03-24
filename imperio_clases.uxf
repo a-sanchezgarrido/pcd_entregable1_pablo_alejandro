@@ -1,86 +1,86 @@
-<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>642</x><y>210</y><w>102</w><h>48</h></coordinates><panel_attributes>Nave
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>648</x><y>234</y><w>102</w><h>48</h></coordinates><panel_attributes>Nave
 --
 - nombre: String
 - repuestos: list[String]
 - comandante: Comandante
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>294</y><w>84</w><h>48</h></coordinates><panel_attributes>Estación Espacial
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>546</x><y>318</y><w>84</w><h>48</h></coordinates><panel_attributes>Estación Espacial
 --
 - tripulacion: int
 - pasaje: int
 - ubicacion: Ubicacion
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>642</x><y>294</y><w>84</w><h>48</h></coordinates><panel_attributes>Nave Estelar
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>318</y><w>84</w><h>48</h></coordinates><panel_attributes>Nave Estelar
 --
 - tripulacion: int
 - pasaje: int
 - clase: ClaseEstelar
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>744</x><y>294</y><w>60</w><h>48</h></coordinates><panel_attributes>Caza Estelar
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>318</y><w>60</w><h>48</h></coordinates><panel_attributes>Caza Estelar
 --
 - dotacion: int
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>696</x><y>108</y><w>96</w><h>72</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>132</y><w>96</w><h>72</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Unidad Combate Imperial
 --
 - idCombate: String
 - claveCifrada: int
 --
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>210</y><w>72</w><h>42</h></coordinates><panel_attributes>Vehiculo Terrestre
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>762</x><y>234</y><w>72</w><h>42</h></coordinates><panel_attributes>Vehiculo Terrestre
 --
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>78</x><y>312</y><w>96</w><h>72</h></coordinates><panel_attributes>Repuesto
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>84</x><y>336</y><w>96</w><h>72</h></coordinates><panel_attributes>Repuesto
 --
 - nombre: String
 - proveedor: String
 - stock: int 
 - precio: int
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>78</x><y>198</y><w>96</w><h>72</h></coordinates><panel_attributes>Almacen
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>84</x><y>222</y><w>96</w><h>72</h></coordinates><panel_attributes>Almacen
 --
 - nombre: String
 - localizacion: String
 - catalogo: list[Repuesto]
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>204</y><w>120</w><h>54</h></coordinates><panel_attributes>Comandante
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>228</y><w>126</w><h>54</h></coordinates><panel_attributes>Comandante
 --
 
 --
 + consultarRepuestos(r: Repuesto)
-+ adquirirRepuesto(r: Repuesto)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>258</x><y>204</y><w>162</w><h>54</h></coordinates><panel_attributes>Operario Almacen
++ adquirirRepuesto(r: Repuesto)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>264</x><y>228</y><w>162</w><h>54</h></coordinates><panel_attributes>Operario Almacen
 --
 
 --
 + actualizarCatalogo(r: Repuesto, a: Almacen)
-+ actualizarStocks(r: Repuesto, )</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>534</x><y>372</y><w>90</w><h>54</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
++ actualizarStocks(r: Repuesto, )</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>396</y><w>90</w><h>54</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
 Ubicacion
 --
 ENDOR
 CUMULO_RAIMOS
-NEBULOSA_KALIIDA</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>642</x><y>372</y><w>90</w><h>54</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+NEBULOSA_KALIIDA</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>396</y><w>90</w><h>54</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
 Clase Nave
 --
 EJECUTOR
 ECLIPSE
-SOBERANO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>174</y><w>48</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;60</additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>174</y><w>48</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>582</x><y>252</y><w>72</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>726</x><y>252</y><w>54</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;70</additional_attributes></element><element><id>Relation</id><coordinates><x>678</x><y>252</y><w>18</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>114</y><w>132</w><h>60</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+SOBERANO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>762</x><y>198</y><w>48</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;60</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>198</y><w>48</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>588</x><y>276</y><w>72</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>732</x><y>276</y><w>54</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;70</additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>276</y><w>18</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>354</x><y>138</y><w>132</w><h>60</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Usuario
 --
 - id: int
 --
 + consultarRepuestos(r: Repuesto)
-+ adquirirRepuesto(r: Repuesto)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>474</x><y>138</y><w>42</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;110</additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>138</y><w>48</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>264</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
++ adquirirRepuesto(r: Repuesto)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>162</y><w>42</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;110</additional_attributes></element><element><id>Relation</id><coordinates><x>318</x><y>162</y><w>48</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>126</x><y>288</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
-m2=0..*</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>564</x><y>216</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=-
+m2=0..*</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>240</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=-
 m1=1..*
 m2=1
-tiene asignada &gt;</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>222</y><w>102</w><h>24</h></coordinates><panel_attributes>lt=&lt;.
-</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>0</y><w>132</w><h>54</h></coordinates><panel_attributes>MiImperio
+tiene asignada &gt;</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>174</x><y>246</y><w>102</w><h>24</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>354</x><y>24</y><w>132</w><h>54</h></coordinates><panel_attributes>MiImperio
 --
 - flota: list[UnidadCombateImperial]
 - usuarios: list[Usuario]
-- almacenes: list[Almacen]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>474</x><y>24</y><w>234</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+- almacenes: list[Almacen]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>48</y><w>234</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=0..*
-</panel_attributes><additional_attributes>10;10;370;140</additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>48</y><w>30</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>10;10;370;140</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>72</y><w>30</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
-m2=1..*</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>42</y><w>192</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..*</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>174</x><y>66</y><w>192</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
-m2=1..*</panel_attributes><additional_attributes>300;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>678</x><y>336</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>336</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>252</y><w>324</w><h>84</h></coordinates><panel_attributes>lt=&lt;.
+m2=1..*</panel_attributes><additional_attributes>300;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>360</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>582</x><y>360</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>174</x><y>276</y><w>324</w><h>84</h></coordinates><panel_attributes>lt=&lt;.
 </panel_attributes><additional_attributes>10;10;190;120;420;120;520;10</additional_attributes></element></diagram>
