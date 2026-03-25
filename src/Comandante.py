@@ -1,6 +1,7 @@
 from Usuario import Usuario
 from Repuesto import Repuesto
 from Nave import Nave
+from Errores import NaveNoComandada, RepuestoSinStock
 
 class Comandante(Usuario):
     def __init__(self, id):
@@ -20,14 +21,11 @@ class Comandante(Usuario):
                 nave = i
                 break
         if nave is None:
-            print(f"No comanda ninguna nave llamada '{nombre_nave}'.")
-            return False
+            raise NaveNoComandada(nombre_nave)
+        
         if nave.comprobar_repuesto(nombre_repuesto):
             print(f"El repuesto {nombre_repuesto} se encuentra entre los necesarios para la nave")
             return True
-        else: 
-            print(f"El respuesto {nombre_repuesto} no es necesario para esta nave")
-            return False
 
     def adquirir_repuesto(self, nombre_repuesto, almacen, nombre_nave):
         nave = None
@@ -36,10 +34,9 @@ class Comandante(Usuario):
                 nave = i
                 break
         if nave is None:
-            print(f"No comanda ninguna nave llamada '{nombre_nave}'.")
-            return False
+            raise NaveNoComandada(nombre_nave)
 
-        if nombre_repuesto not in nave.get_repuestos():
+        if nombre_repuesto not in nave.get_lista_repuestos():
             print(f"El repuesto {nombre_repuesto} no está en la lista de repuestos de {nombre_nave}")
             return False
 
@@ -51,8 +48,7 @@ class Comandante(Usuario):
                     print(f"Repuesto {nombre_repuesto} adquirido correctamente para la nave {nombre_nave}")
                     return True 
                 else:
-                    print(f"No hay stock de {nombre_repuesto}")
-                    return False
+                    raise RepuestoSinStock(i)
         
         print(f"El repuesto {nombre_repuesto} no está en este almacén")
         return False

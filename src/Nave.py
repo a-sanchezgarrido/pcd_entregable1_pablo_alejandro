@@ -1,5 +1,6 @@
 from abc import abstractmethod
 from UnidadCombateImperial import UnidadCombateImperial
+from Errores import RepuestoDeOtraNave
 
 class Nave(UnidadCombateImperial):
     def __init__(self, idCombate, claveCifrada, nombre, lista_repuestos, comandante):
@@ -21,7 +22,7 @@ class Nave(UnidadCombateImperial):
     def cambiar_comandante(self, comandante):
         comandante_viejo = self.get_comandante()
         lista_vieja = comandante_viejo.get_naves_asignadas()        
-        for i in lista_vieja:
+        for i in range(len(lista_vieja)):
                 if lista_vieja[i].get_nombre() == self.get_nombre():
                     del lista_vieja[i]
                     break 
@@ -30,6 +31,6 @@ class Nave(UnidadCombateImperial):
 
     def comprobar_repuesto(self, nombre_repuesto):
         for i in self.get_lista_repuestos():
-            if i.get_nombre() == nombre_repuesto:
+            if i == nombre_repuesto:
                 return True  
-        return False
+        raise RepuestoDeOtraNave(nombre_repuesto)

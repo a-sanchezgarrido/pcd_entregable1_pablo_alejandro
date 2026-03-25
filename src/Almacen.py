@@ -1,3 +1,5 @@
+from Errores import RepuestoNoEncontrado
+
 class Almacen():
     def __init__(self, nombre, localizacion, catalogo):
         self.__nombre = nombre
@@ -17,4 +19,4 @@ class Almacen():
         for i in self.get_catalogo():
             if i.get_nombre() == nombre_repuesto:
                 return True  
-        return False
+        raise RepuestoNoEncontrado(nombre_repuesto)
