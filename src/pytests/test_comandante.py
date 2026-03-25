@@ -8,7 +8,6 @@ from Errores import NaveNoComandada, RepuestoDeOtraNave, RepuestoSinStock, Repue
 def test_resta_stock():
     comandante = Comandante("Han Solo")
     mi_caza = CazaEstelar("Caza1", 1,"Halcón Milenario", ["Motor"], comandante, 1) 
-    comandante.get_naves_asignadas().append(mi_caza)
     
     motor = Repuesto("Motor", "Almacén Espacial 2", stock=5, precio=100)
     almacen = Almacen("Almacén principal", "Tatooine", [motor])
@@ -30,7 +29,6 @@ def test_adquirir_repuesto_nave_no_comandada():
 def test_adquirir_repuesto_no_compatible():
     comandante = Comandante("Luke")
     mi_caza = CazaEstelar("Caza2", 1,"Ala-Y", ["Batería"], comandante, 1) 
-    comandante.get_naves_asignadas().append(mi_caza)
     almacen = Almacen("Almacén principal", "Endor", [])
 
     with pytest.raises(RepuestoDeOtraNave):
@@ -40,7 +38,6 @@ def test_adquirir_repuesto_no_compatible():
 def test_adquirir_repuesto_sin_stock():
     comandante = Comandante("Han Solo")
     mi_caza = CazaEstelar("Caza1", 1,"Halcón Milenario", ["Motor raro"], comandante, 1) 
-    comandante.get_naves_asignadas().append(mi_caza)
     
     motor_sin_stock = Repuesto("Motor raro", "Empresa cerrada", stock=0, precio=1000)
     almacen = Almacen("Taller de repuestos", "Tatooine", [motor_sin_stock])
@@ -51,8 +48,7 @@ def test_adquirir_repuesto_sin_stock():
 
 def test_adquirir_repuesto_no_existe_en_almacen():
     comandante = Comandante("Han Solo")
-    mi_caza = CazaEstelar("Caza1", 1,"Halcón Milenario", ["Motor"], comandante, 1) 
-    comandante.get_naves_asignadas().append(mi_caza)
+    mi_caza = CazaEstelar("Caza1", 1, "Halcón Milenario", ["Motor"], comandante, 1) 
     
     almacen = Almacen("Taller de repuestos", "Tatooine", [Repuesto("Tornillo cápsula de escape", "Almacén espacial 2", stock=10, precio=5)]) 
 

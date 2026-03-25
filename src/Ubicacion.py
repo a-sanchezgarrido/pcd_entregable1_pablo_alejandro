@@ -1,6 +1,6 @@
 from enum import Enum
 
 class Ubicacion(Enum):
-    Endor = 1
-    Cumulo_Raimos = 2
-    Nebulosa_Kaliida = 3
+    ENDOR = 1
+    CUMULO_RAIMOS = 2
+    NEBULOSA_KALIIDA = 3

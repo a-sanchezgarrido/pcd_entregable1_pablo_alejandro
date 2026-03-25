@@ -38,7 +38,7 @@ class OperarioAlmacen(Usuario):
         for i in imperio.get_lista_almacenes():
             try: 
                 i.comprobar_repuesto(nombre_repuesto)
-                print(f"El repuesto {nombre_repuesto} se encuentra en el almacen {i.get_nombre()}")
+                print(f"El repuesto {nombre_repuesto} se encuentra en el almacén {i.get_nombre()}")
                 encontrado = True
             except RepuestoNoEncontrado:
                 pass
