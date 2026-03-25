@@ -25,7 +25,7 @@ class Comandante(Usuario):
                 raise NaveNoComandada(nombre_nave)
             
             nave.comprobar_repuesto(nombre_repuesto)
-            print(f"El repuesto {nombre_repuesto} se encuentra entre los necesarios para la nave")
+            print(f"El repuesto {nombre_repuesto} se encuentra entre los necesarios para la nave '{nombre_nave}'")
             return True
         
         except NaveNoComandada as e:

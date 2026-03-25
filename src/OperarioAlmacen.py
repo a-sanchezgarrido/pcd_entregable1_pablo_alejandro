@@ -27,12 +27,22 @@ class OperarioAlmacen(Usuario):
                 if i.get_nombre() == repuesto.get_nombre():
                     self.actualizar_stock(i, repuesto.get_stock())
                     print(f"Stock actualizado para {repuesto.get_nombre()}") 
+                    return True
         except RepuestoNoEncontrado:
             almacen.get_catalogo().append(repuesto)
             print(f"Repuesto {repuesto.get_nombre()} añadido al catálogo")
 
 
     def encuentra_repuesto(self, nombre_repuesto, imperio):
+        encontrado = False
         for i in imperio.get_lista_almacenes():
-            self.consultar_repuesto_almacen(nombre_repuesto, i)
+            try: 
+                i.comprobar_repuesto(nombre_repuesto)
+                print(f"El repuesto {nombre_repuesto} se encuentra en el almacen {i.get_nombre()}")
+                encontrado = True
+            except RepuestoNoEncontrado:
+                pass
+        if not encontrado:
+            print(f"El repuesto {nombre_repuesto} no se encuentra en ningún almacén")
+        
 
