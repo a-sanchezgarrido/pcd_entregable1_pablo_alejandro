@@ -10,7 +10,7 @@ class OperarioAlmacen(Usuario):
     def consultar_repuesto_almacen(self, nombre_repuesto, almacen):
         try:
             almacen.comprobar_repuesto(nombre_repuesto)
-            print(f"El repuesto {nombre_repuesto} se encuentra en el almacén")
+            print(f"El repuesto {nombre_repuesto} se encuentra en el almacén {almacen.get_nombre()}")
             return True        
         except RepuestoNoEncontrado as e:
             print(e)
@@ -31,7 +31,7 @@ class OperarioAlmacen(Usuario):
         except RepuestoNoEncontrado:
             almacen.get_catalogo().append(repuesto)
             print(f"Repuesto {repuesto.get_nombre()} añadido al catálogo")
-
+            return True
 
     def encuentra_repuesto(self, nombre_repuesto, imperio):
         encontrado = False

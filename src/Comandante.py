@@ -56,6 +56,6 @@ class Comandante(Usuario):
                     print(f"Repuesto {nombre_repuesto} adquirido correctamente para la nave {nombre_nave}")
                     return True 
                 else:
-                    raise RepuestoSinStock(i)
+                    raise RepuestoSinStock(i.get_nombre())
         raise RepuestoNoEncontrado(nombre_repuesto)
     
